@@ -44,7 +44,7 @@ const Dashboard: React.FC = () => {
       <div className='p-4 md:p-2'>
         <GreetingCard />
       </div>
-      <div className="flex flex-wrap gap-4">
+      <div className="w-full flex flex-wrap justify-center gap-4">
         {quickStats.map((stat, idx) => (
           <QuickCard key={idx} {...stat} />
         ))}

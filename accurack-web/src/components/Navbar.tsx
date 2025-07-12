@@ -15,21 +15,24 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full flex justify-between items-center px-8 py-4 sticky top-0 z-50 
+    <nav className="w-full flex justify-between items-center px-4 sm:px-8 py-4 sticky top-0 z-50 
       bg-gradient-to-b from-white/80 to-transparent dark:from-black/80 dark:to-transparent 
       backdrop-blur-sm text-black dark:text-white">
 
+      {/* Logo and name */}
       <div className="flex items-center gap-2">
-        <Image 
-        src="/Accurack Logo.svg"
-        alt="Accurack Logo"
-        width={40}
-        height={40}
-        className=""
+        <Image
+          src="/Accurack Logo.svg"
+          alt="Accurack Logo"
+          width={40}
+          height={40}
         />
-        <h1 className="font-semibold text-2xl">Accurack</h1>
+        {/* Hide name on small screens */}
+        <h1 className="font-semibold text-2xl hidden sm:block">Accurack</h1>
       </div>
-      <div className="flex gap-8 text-lg">
+
+      {/* Nav links */}
+      <div className="flex gap-4 sm:gap-8 text-sm sm:text-lg overflow-x-auto max-w-[70%] sm:max-w-none">
         {links.map(({ href, label }) => (
           <Link
             key={href}
@@ -37,8 +40,12 @@ export default function Navbar() {
             className={`
               pb-1
               border-b-2
-              transition
-              ${isActive(href) ? "font-bold border-yellow-400" : "border-transparent hover:border-yellow-400 transition duration-300 ease-in-out hover:-translate-y-1"}
+              truncate
+              max-w-[100px]
+              ${isActive(href)
+                ? "font-bold border-yellow-400"
+                : "border-transparent hover:border-yellow-400 transition duration-300 ease-in-out hover:-translate-y-1"
+              }
             `}
           >
             {label}
