@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -19,8 +20,14 @@ export default function Navbar() {
       backdrop-blur-sm text-black dark:text-white">
 
       <div className="flex items-center gap-2">
-        <img src="/Accurack Logo.svg" alt="Accurack Logo" className="w-8 h-8" />
-        <h1 className="font-semibold text-xl">Accurack</h1>
+        <Image 
+        src="/Accurack Logo.svg"
+        alt="Accurack Logo"
+        width={40}
+        height={40}
+        className=""
+        />
+        <h1 className="font-semibold text-2xl">Accurack</h1>
       </div>
       <div className="flex gap-8 text-lg">
         {links.map(({ href, label }) => (
