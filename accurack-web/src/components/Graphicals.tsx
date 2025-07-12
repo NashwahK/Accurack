@@ -26,8 +26,8 @@ const pieData = [
 ];
 
 const barData = [
-  { department: "Manufacturing", value: 500, fill: "#C7DC1C" },
-  { department: "Production", value: 300, fill: "#EF7C23" },
+  { department: "Manufacture", value: 500, fill: "#C7DC1C" },
+  { department: "Produce", value: 300, fill: "#EF7C23" },
   { department: "Design", value: 700, fill: "#0573EC" },
   { department: "Stitching", value: 800, fill: "#C7DC1C" },
   { department: "Packaging", value: 250, fill: "#EF7C23" },
@@ -109,7 +109,7 @@ const Graphicals = () => {
 
     <div
       key="bar"
-      className="bg-white dark:bg-zinc-900 rounded-2xl p-5 shadow w-full md:w-1/3"
+      className="bg-white dark:bg-zinc-900 rounded-2xl p-3 shadow w-full md:w-1/3"
     >
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-2xl font-extrabold">Stock Levels</h3>
@@ -121,9 +121,9 @@ const Graphicals = () => {
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
           data={barData}
-          barSize={30}
-          barCategoryGap="15%"
-          margin={{ top: 10, right: 20, left: 10, bottom: 20 }}
+          barSize={20}
+          barCategoryGap="6%"
+          margin={{ top: 10, right: 20, left: 2, bottom: 20 }}
         >
           <CartesianGrid stroke="#e5e7eb" vertical={false} />
           <XAxis
