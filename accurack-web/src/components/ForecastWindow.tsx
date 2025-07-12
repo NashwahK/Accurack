@@ -16,13 +16,14 @@ const ForecastWindow: React.FC<ForecastWindowProps> = ({ insights }) => {
 
   const handleSend = () => {
     if (!input.trim()) return;
+
     setMessages((prev) => [...prev, { role: 'user', text: input }]);
     setInput('');
     setIsTyping(true);
+
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
-        { role: 'user', text: input },
         {
           role: 'bot',
           text: 'Thanks for your question! I’ll get back to you with a forecast shortly.',
@@ -31,6 +32,7 @@ const ForecastWindow: React.FC<ForecastWindowProps> = ({ insights }) => {
       setIsTyping(false);
     }, 2000);
   };
+
 
   return (
     <Card
