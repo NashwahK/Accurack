@@ -43,7 +43,7 @@ const GaugeChart = () => {
   const progress = (clamped / 100) * circumference;
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow w-full md:w-1/3">
+    <div className="bg-white dark:bg-zinc-900 rounded-2xl p-5 shadow w-full md:w-1/3">
       <h3 className="text-2xl font-extrabold mb-4">Supply Chain Efficiency</h3>
 
       <div className="relative w-60 h-40 mx-auto">
@@ -91,7 +91,7 @@ const Graphicals = () => {
   const charts = [
     <div
       key="pie"
-      className="bg-white dark:bg-gray-900 rounded-2xl p-4 shadow w-full md:w-1/3"
+      className="bg-white dark:bg-zinc-900 rounded-2xl p-4 shadow w-full md:w-1/3"
     >
       <h3 className="text-2xl font-extrabold mb-2">Unit Economics</h3>
       <ResponsiveContainer width="100%" height={250}>
@@ -109,7 +109,7 @@ const Graphicals = () => {
 
     <div
       key="bar"
-      className="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow w-full md:w-1/3"
+      className="bg-white dark:bg-zinc-900 rounded-2xl p-5 shadow w-full md:w-1/3"
     >
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-2xl font-extrabold">Stock Levels</h3>
